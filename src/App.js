@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import RegularNav from "./components/RegularNav";
+import BasicList from "./components/BasicList";
+import NavBootstrap from "./components/NavBootstrap";
+import NavbarMui from "./components/NavbarMui";
+import ButtonChoice from "./components/ButtonChoice";
+import { Outlet } from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    // primary: {
+    //   main: "#3f51b5",
+    // },
+    // secondary: {
+    //   main: "#f50057",
+    // },
+    // Other color definitions...
+  },
+});
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+      {/* <RegularNav /> */}
+      <NavBootstrap />
+      <NavbarMui />
+      <ButtonChoice />
+      <Outlet />
+      {/* <BasicList /> */}
+      </ThemeProvider>
     </div>
   );
 }
