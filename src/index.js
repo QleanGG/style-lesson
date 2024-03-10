@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import UserProfile from './components/UserProfile';
+import LoginPage from './components/LoginPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
           <Route path='/contact'></Route>
           <Route path='/profile' element={<UserProfile />}></Route>
         </Route>
+          <Route path='/login' element={<LoginPage />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

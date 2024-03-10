@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, TextField } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 export default function NavbarMui() {
   const anchorRef = useRef(null);
@@ -33,7 +34,7 @@ export default function NavbarMui() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           MUI NavBar
         </Typography>
-        <Button color="inherit">Login</Button>
+        <Button component={Link} to="/login" color="inherit">Login</Button>
         <Menu
           id="basic-menu"
           anchorEl={anchorRef.current}
