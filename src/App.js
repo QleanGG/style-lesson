@@ -24,10 +24,10 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-      {/* <RegularNav /> */}
-      <NavBootstrap />
-      <NavbarMui />
-      <ButtonChoice />
+      <RegularNav />
+      {/* <NavBootstrap /> */}
+      {/* <NavbarMui /> */}
+      {/* <ButtonChoice /> */}
       <Outlet />
       {/* <BasicList /> */}
       </ThemeProvider>
